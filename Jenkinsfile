@@ -20,7 +20,7 @@ pipeline {
              myVar = "oki doki"
  	    }
             steps {
-             echo 'this is another branch to test
+             echo 'this is another branch to test'
 	    }
         }
     }
