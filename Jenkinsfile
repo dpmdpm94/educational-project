@@ -16,7 +16,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-	    environments {
+	    environment {
              myVar = "oki doki"
  	    }
             steps {
