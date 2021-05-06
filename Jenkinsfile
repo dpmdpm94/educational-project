@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying.... the $(currentBuild.result)'
+                sh  'echo "Deploying.... the $(currentBuild.result)"'
             }
         }
     }
