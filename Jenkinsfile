@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh  'echo "Deploying.... the $(currentBuild.result)"'
+                echo "Deploying.... the ${env.BUILD_ID} on ${env.JENKINS_URL} build is:  ${currentBuild.result}"
             }
         }
     }
