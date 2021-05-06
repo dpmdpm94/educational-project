@@ -20,8 +20,8 @@ pipeline {
              myVar = "oki doki"
  	    }
             steps {
-                echo "Deploying.... the ${env.BUILD_ID} on ${env.JENKINS_URL} build is:  ${myVar}"
-            }
+             echo 'this is another branch to test
+	    }
         }
     }
 }
