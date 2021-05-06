@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Start building'
+		sh ./gradlew shadowJar
+                archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
+		echo 'Building is done'
             }
         }
         stage('Test') {
