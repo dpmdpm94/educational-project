@@ -16,8 +16,11 @@ pipeline {
             }
         }
         stage('Deploy') {
+	    environments {
+             myVar = "oki doki"
+ 	    }
             steps {
-                echo "Deploying.... the ${env.BUILD_ID} on ${env.JENKINS_URL} build is:  ${currentBuild.result}"
+                echo "Deploying.... the ${env.BUILD_ID} on ${env.JENKINS_URL} build is:  ${myVar}"
             }
         }
     }
